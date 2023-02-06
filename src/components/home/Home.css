@@ -40,6 +40,8 @@ button:hover {
 .upd p {
     margin-top: 2rem;
     font-weight: 400;
+    font-size: 20px;
+    text-align: center;
 }
 
 
@@ -72,6 +74,7 @@ button:hover {
 
 h3 {
     font-size: 17px;
+    text-align: center;
 }
 
 h2 {
