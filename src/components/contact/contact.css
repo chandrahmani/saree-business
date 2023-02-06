@@ -1,0 +1,27 @@
+.dtl-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.map-cont {
+    height: 40vh;
+    text-align: center;
+}
+
+.map-cont h1 {
+    font-size: 25px;
+}
+
+.dtl button {
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+    width: 81%;
+}
+
+.dtl h4 {
+    margin-left: 2rem;
+}
+
+ul li {
+    list-style-type: none;
+}
