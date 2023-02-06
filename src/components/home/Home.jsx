@@ -32,7 +32,7 @@ const Home = () => {
                                 <h2>Posted on 2022 Jun 8</h2>
                                 <h3>Pure Kora silk saree</h3>
                                 <h4>Rs 2000/</h4>
-                                 <h1>jundai@214.com</h1>
+
                             </div>
                         </div>
                         <div className="grid-item">
