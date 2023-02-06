@@ -87,6 +87,8 @@ h4 {
 
 @media screen and (max-width: 645px) {
     .grid-item img {
-        width: 400px;
+        width: 314px;
     }
 }
+
+@media screen and (max-width:850px) {}
