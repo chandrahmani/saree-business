@@ -1,12 +1,24 @@
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import './App.css'
-import News from './components/News'
+import Home from './components/home/Home'
+import Navbar from './components/navbar/Navbar'
+
 
 function App() {
 
 
   return (
     <div className="App">
-      <h1>SMS SAREE </h1>
+      <BrowserRouter>
+        <Navbar />
+
+
+        <Routes>
+          <Route path='/' element={<Home />} >
+          </Route>
+        </Routes>
+      </BrowserRouter>
+
     </div>
   )
 }
