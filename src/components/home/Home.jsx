@@ -1,3 +1,4 @@
+import Contact from '../contact/Contact';
 import './Home.css'
 const Home = () => {
     return (
@@ -17,7 +18,6 @@ const Home = () => {
                     <img src='https://lh3.googleusercontent.com/p/AF1QipPqURRTKeA-oJ8dpFDwLvhIyMn_6-xjvmzv5flw=w1080-h608-p-no-v0' />
 
                 </div>
-                <hr />
                 <div className='upd'>
                     <p>UPDATE</p>
                 </div>
@@ -82,6 +82,7 @@ const Home = () => {
                     </div>
                 </div>
 
+                <Contact />
             </section>
         </>
     )
