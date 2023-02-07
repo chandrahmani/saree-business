@@ -16,15 +16,15 @@ const Contact = () => {
                         <button>CALL NOW</button>
                     </div>
 
-                    <div>
-                        <h4>Address</h4>
+                    <div className='dtl'>
+                        <h5>Address</h5>
                         <span>Rasoolpur</span>
                         <h6>Distt</h6>
                         <span>Muhammadabad Gohna, Uttar Pradesh 276403  </span>
-                        <h4>India</h4>
+                        <h5>India</h5>
                     </div>
 
-                    <div>
+                    <div className='dtl'>
                         <h4>Business Hours</h4>
                         <ul>
                             <li>Mon: 9:00 - 8:00 PM</li>
