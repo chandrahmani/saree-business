@@ -2,6 +2,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import './App.css'
 import Home from './components/home/Home'
 import Navbar from './components/navbar/Navbar'
+import Signup from './view/signup/Signup'
 
 
 function App() {
@@ -14,8 +15,8 @@ function App() {
 
 
         <Routes>
-          <Route path='/' element={<Home />} >
-          </Route>
+          <Route path='/' element={<Home />} />
+          <Route path='/signup' element={<Signup />} />
         </Routes>
       </BrowserRouter>
 
