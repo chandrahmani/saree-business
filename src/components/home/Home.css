@@ -91,4 +91,8 @@ h4 {
     }
 }
 
-@media screen and (max-width:850px) {}
+@media screen and (max-width: 500px) {
+    .info-wrp {
+        max-width: 192px;
+    }
+}
