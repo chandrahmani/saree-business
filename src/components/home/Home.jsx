@@ -1,6 +1,30 @@
-import Contact from '../contact/Contact';
+import { useEffect, useState } from 'react';
 import './Home.css'
+import axios from 'axios';
+import Contact from '../contact/Contact';
+
+
 const Home = () => {
+    const [datas, setDatas] = useState([])
+
+    console.log("cdf", datas)
+
+    const getData = async () => {
+        try {
+            const { data: result } = await axios.get("data.json")
+
+            console.log(result)
+            setDatas(result)
+
+        } catch (error) {
+            console.log(error)
+        }
+    }
+
+    useEffect(() => {
+        getData()
+    }, [])
+
     return (
         <>
             <section>
@@ -24,63 +48,20 @@ const Home = () => {
 
 
                 <div>
-                    <div className="grid-container">
-                        <div className="grid-item">
-                            <img src='https://media.istockphoto.com/id/93355119/photo/indian-saris.jpg?s=612x612&w=0&k=20&c=afmfiTJg0VAmIY6P_TJ_JYsTfGhUdevv18WXQRUZ8NQ=' />
+                    {datas.map((item, index) =>
+                        <div key={index} className="grid-container">
+                            <div className='grid-item'>
+                                <img src={item.url} />
 
-                            <div className='info-wrps'>
-                                <h2>Posted on 2022 Jun 8</h2>
-                                <h3>Pure Kora silk saree</h3>
-                                <h4>Rs 2000/</h4>
-
+                                <div className='info-wrps'>
+                                    <h2>{item.date}</h2>
+                                    <h3>{item.silk}</h3>
+                                    <h4>{item.price}</h4>
+                                </div>
                             </div>
                         </div>
-                        <div className="grid-item">
-                            <img src='https://media.istockphoto.com/id/93355119/photo/indian-saris.jpg?s=612x612&w=0&k=20&c=afmfiTJg0VAmIY6P_TJ_JYsTfGhUdevv18WXQRUZ8NQ=' />
 
-                            <div className='info-wrps'>
-                                <h2>Posted on 2019 Jun 9</h2>
-                                <h3>Pure Kora silk saree</h3>
-                                <h4>Rs 1000/</h4>
-                            </div>
-                        </div>
-                        <div className="grid-item">
-                            <img src='https://media.istockphoto.com/id/1331734513/photo/view-of-indian-woman-fashion-and-tradtional-wear-sarees-in-shop-display.jpg?s=612x612&w=0&k=20&c=PxIU-OUQUZ-h7bBibATmXk_9HLK72w8j4a9wyAvppfk=' />
-
-                            <div className='info-wrps'>
-                                <h2>Posted on 2022 Jun 8</h2>
-                                <h3>Pure Kora silk saree</h3>
-                                <h4>Rs 3500/</h4>
-                            </div>
-                        </div>
-                        <div className="grid-item">
-                            <img src='https://media.istockphoto.com/id/938136656/photo/ethnic-clothing-of-indian-woman.jpg?s=612x612&w=0&k=20&c=oP7qST759ksXozUVKy6KelULa23cKzGrWv_1tP08UKg=' />
-
-                            <div className='info-wrps'>
-                                <h2>Posted on 2022 Jun 8</h2>
-                                <h3>Pure Kora silk saree</h3>
-                                <h4>Rs 1500/</h4>
-                            </div>
-                        </div>
-                        <div className="grid-item">
-                            <img src='https://media.istockphoto.com/id/177724641/photo/famous-saree-of-dhaka.jpg?s=612x612&w=0&k=20&c=B8fRtmxVEC8Odr70zxkBgO_t8UXme6iBqa9evBoQ9wA=' />
-
-                            <div className='info-wrps'>
-                                <h2>Posted on 2023 Jun 8</h2>
-                                <h3>Pure Kora silk saree</h3>
-                                <h4>Rs 3000/</h4>
-                            </div>
-                        </div>
-                        <div className="grid-item">
-                            <img src='https://media.istockphoto.com/id/172673345/photo/purple-and-green-sari.jpg?s=612x612&w=0&k=20&c=hgNNpCVpk_-vTyOG9yIQP3RB3on3duiaPt0soK-_l4Y=' />
-
-                            <div className='info-wrps'>
-                                <h2>Posted on 2022 Jun 8</h2>
-                                <h3>Pure Kora silk saree</h3>
-                                <h4>Rs 2500/</h4>
-                            </div>
-                        </div>
-                    </div>
+                    )}
                 </div>
 
                 <Contact />
