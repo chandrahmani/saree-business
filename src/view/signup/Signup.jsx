@@ -14,8 +14,8 @@ const Signup = () => {
                 <form onSubmit={handleSubmit(onSubmit)} className="form-container">
                     <label htmlFor="name">Name</label>
                     <input type="text" placeholder="enter your name" {...register('name', { required: true, maxLength: 10 })} />
-                    {errors.name && errors.name.type === "required" && <span>This is required</span>}
-                    {errors.name && errors.name.type === "maxLength" && <span>Max length exceeded</span>}
+                    {errors.name && errors.name.type === "required" && <p>This is required</p>}
+                    {errors.name && errors.name.type === "maxLength" && <p>Max length exceeded</p>}
 
                     <input type="email" placeholder="enter your email" {...register('email', { required: true, maxLength: 12 })} />
                     {errors.email && errors.email.type === "maxLength" && <span>Ples Enter 12 Letter</span>}
