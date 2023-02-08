@@ -9,8 +9,6 @@ const Signup = () => {
     }
 
     return (
-
-
         <>
             <section className="form-wrapper">
                 <form onSubmit={handleSubmit(onSubmit)} className="form-container">
