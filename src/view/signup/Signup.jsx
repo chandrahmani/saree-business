@@ -21,7 +21,7 @@ const Signup = () => {
                     {errors.email && errors.email.type === "maxLength" && <span>Ples Enter 12 Letter</span>}
 
                     <input type="password" placeholder="enter your password" {...register("password", { required: true, maxLength: 10 })} />
-                    {errors.password && errors.password.type === "maxLength" && <p>Please Enter 10 <Letter></Letter></p>}
+                    {errors.password && errors.password.type === "maxLength" && <p>Please Enter 10 </p>}
                     <button type="submit" className="bttn">Submit</button>
                 </form>
             </section>
