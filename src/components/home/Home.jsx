@@ -1,9 +1,13 @@
 import './Home.css'
 import Contact from '../contact/Contact';
 import Product from '../product/Product';
+import Modal from '../core/modal/Modal';
 
 
 const Home = () => {
+
+    const [isShowForms, setIsShowForms] = useState(false);
+
     return (
         <>
             <section>
@@ -12,7 +16,7 @@ const Home = () => {
                     <p>Clothing Store in Muhammadabad Gohna
                         Opening at 9:00 AM</p>
 
-                    <button>
+                    <button onClick={() => setIsShowForms(true)}>
                         GET QUOTS
                     </button>
                 </div>
@@ -29,6 +33,17 @@ const Home = () => {
                 <Product />
 
                 <Contact />
+
+                <Modal
+                    onConfirm={handleSubmit(onSubmit)}
+                    onConfirms={onSubmit}
+                    closeBtn="Cancel"
+                    confirmBtn="Update"
+                    onClose={() => {
+                        setIsShowForms(false);
+                    }}>
+                    <h1>fijrffoidjg</h1>
+                </Modal>
             </section>
         </>
     )
