@@ -3,6 +3,7 @@ import './Home.css'
 import Contact from '../contact/Contact';
 import Product from '../product/Product';
 import Modal from '../core/modal/Modal';
+import { Input } from '../core/modal';
 
 
 
@@ -46,7 +47,8 @@ const Home = () => {
                     onClose={() => {
                         setIsShowForms(false);
                     }}>
-                    <h1>fijrffoidjg</h1>
+
+                    <Input type="text" placeholder='enter your name' />
                 </Modal>}
         </>
     )
