@@ -1,7 +1,9 @@
+import { useState } from 'react';
 import './Home.css'
 import Contact from '../contact/Contact';
 import Product from '../product/Product';
 import Modal from '../core/modal/Modal';
+
 
 
 const Home = () => {
