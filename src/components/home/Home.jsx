@@ -34,16 +34,18 @@ const Home = () => {
 
                 <Contact />
 
-                {isShowForms &&
-                    <Modal
-                        closeBtn="Cancel"
-                        confirmBtn="Update"
-                        onClose={() => {
-                            setIsShowForms(false);
-                        }}>
-                        <h1>fijrffoidjg</h1>
-                    </Modal>}
+
             </section>
+
+            {isShowForms &&
+                <Modal
+                    closeBtn="Cancel"
+                    confirmBtn="Update"
+                    onClose={() => {
+                        setIsShowForms(false);
+                    }}>
+                    <h1>fijrffoidjg</h1>
+                </Modal>}
         </>
     )
 }
