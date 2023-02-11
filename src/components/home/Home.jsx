@@ -34,16 +34,15 @@ const Home = () => {
 
                 <Contact />
 
-                <Modal
-                    onConfirm={handleSubmit(onSubmit)}
-                    onConfirms={onSubmit}
-                    closeBtn="Cancel"
-                    confirmBtn="Update"
-                    onClose={() => {
-                        setIsShowForms(false);
-                    }}>
-                    <h1>fijrffoidjg</h1>
-                </Modal>
+                {isShowForms &&
+                    <Modal
+                        closeBtn="Cancel"
+                        confirmBtn="Update"
+                        onClose={() => {
+                            setIsShowForms(false);
+                        }}>
+                        <h1>fijrffoidjg</h1>
+                    </Modal>}
             </section>
         </>
     )

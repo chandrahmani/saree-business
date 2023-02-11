@@ -1,4 +1,3 @@
-
 import { XCircle } from "phosphor-react";
 import { useState } from "react";
 import { Button } from ".";
