@@ -38,5 +38,6 @@ export const ListGroup = styled.div`
 `;
 
 export const Div = styled.div`
+padding: 3rem;
   margin: ${(props) => props.size};
 `;
