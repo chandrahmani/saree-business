@@ -34,6 +34,7 @@ const Modal = ({
                                 <Button danger onClick={closeHandle}>
                                     <XCircle size={25} />
                                 </Button>
+
                             </div>
 
                             <div className="btn-container">
