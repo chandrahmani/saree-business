@@ -1,6 +1,7 @@
-import { Button } from "components/styled";
+
 import { XCircle } from "phosphor-react";
 import { useState } from "react";
+import { Button } from ".";
 import "./Modal.css";
 
 const Modal = ({
