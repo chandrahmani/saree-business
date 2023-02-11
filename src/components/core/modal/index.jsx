@@ -23,3 +23,20 @@ export const Input = styled.input`
   padding: ${(props) => props.size};
   margin: ${(props) => props.size};
 `;
+
+
+export const Flex = styled.div`
+  display: flex;
+  justify-content: space-between;
+  background-color: #1a88e3;
+  padding: 20px;
+`;
+
+export const ListGroup = styled.div`
+  border: 1px solid;
+  margin-bottom: 1rem;
+`;
+
+export const Div = styled.div`
+  margin: ${(props) => props.size};
+`;
