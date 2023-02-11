@@ -5,8 +5,6 @@ const Product = () => {
 
     const [datas, setDatas] = useState([])
 
-    console.log("cdf", datas)
-
     const getData = async () => {
         try {
             const { data: result } = await axios.get("data.json")
