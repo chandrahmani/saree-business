@@ -48,7 +48,7 @@ const Home = () => {
                         setIsShowForms(false);
                     }}>
 
-                    <Div>
+                    <Div size="0.5rem">
                         <Input size="0.45rem" type="text" placeholder='enter your name' />
                     </Div>
 
