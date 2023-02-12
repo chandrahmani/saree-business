@@ -11,6 +11,25 @@ const Home = () => {
 
     const [isShowForms, setIsShowForms] = useState(false);
 
+    const [index, setIndex] = useState(0);
+
+
+    const next = () => {
+        if (index === index.length - 1) {
+            setIndex(0)
+        } else {
+            setIndex(index + 1)
+        }
+    }
+
+    const prev = () => {
+        if (index === 0) {
+            setIndex(index.length - 1)
+        } else {
+            setIndex(index - 1)
+        }
+    }
+
     return (
         <>
             <section>
@@ -25,8 +44,47 @@ const Home = () => {
                 </div>
 
                 <div className='img-wrp'>
-                    <img src='https://lh3.googleusercontent.com/p/AF1QipPqURRTKeA-oJ8dpFDwLvhIyMn_6-xjvmzv5flw=w1080-h608-p-no-v0' />
+                    <img src='' />
 
+                    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="https://lh3.googleusercontent.com/p/AF1QipPqURRTKeA-oJ8dpFDwLvhIyMn_6-xjvmzv5flw=w1080-h608-p-no-v0" class="d-block w-100" alt="..." />
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>First slide label</h5>
+                                    <p>Some representative placeholder content for the first slide.</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://media.istockphoto.com/id/1331734513/photo/view-of-indian-woman-fashion-and-tradtional-wear-sarees-in-shop-display.jpg?s=612x612&w=0&k=20&c=PxIU-OUQUZ-h7bBibATmXk_9HLK72w8j4a9wyAvppfk=" class="d-block w-100" alt="..." />
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>Second slide label</h5>
+                                    <p>Some representative placeholder content for the second slide.</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://media.istockphoto.com/id/177724641/photo/famous-saree-of-dhaka.jpg?s=612x612&w=0&k=20&c=B8fRtmxVEC8Odr70zxkBgO_t8UXme6iBqa9evBoQ9wA=" class="d-block w-100" alt="..." />
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>Third slide label</h5>
+                                    <p>Some representative placeholder content for the third slide.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev" onClick={prev}>
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next" onClick={next}>
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+
+                    </div>
                 </div>
                 <div className='upd'>
                     <p>UPDATE</p>
