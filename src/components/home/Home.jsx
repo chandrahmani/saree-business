@@ -34,7 +34,7 @@ const Home = () => {
                         aria-label="Loading Spinner"
                         data-testid="loader"
                         className='loder'
-                    >PLeas Wait</ClipLoader>
+                    ><h2>please wait</h2></ClipLoader>
                     :
                     <section>
                         <div className='info-wrp'>
