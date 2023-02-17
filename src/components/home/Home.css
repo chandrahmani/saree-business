@@ -85,6 +85,12 @@ h4 {
     font-size: 20px;
 }
 
+.loder {
+    max-width: 400px;
+    margin: auto;
+    padding: 2rem;
+}
+
 @media screen and (max-width: 645px) {
     .grid-item img {
         width: 314px;

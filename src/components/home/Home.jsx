@@ -18,7 +18,7 @@ const Home = () => {
 
         setTimeout(() => {
             setLoading(false)
-        }, 5000)
+        }, 4000)
 
     }, [])
 
@@ -33,6 +33,7 @@ const Home = () => {
                         size={100}
                         aria-label="Loading Spinner"
                         data-testid="loader"
+                        className='loder'
                     />
                     :
                     <section>
