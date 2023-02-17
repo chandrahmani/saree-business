@@ -18,7 +18,7 @@ const Home = () => {
 
         setTimeout(() => {
             setLoading(false)
-        }, 4000)
+        }, 3000)
 
     }, [])
 
@@ -34,7 +34,7 @@ const Home = () => {
                         aria-label="Loading Spinner"
                         data-testid="loader"
                         className='loder'
-                    ><h2>please wait</h2></ClipLoader>
+                    />
                     :
                     <section>
                         <div className='info-wrp'>
