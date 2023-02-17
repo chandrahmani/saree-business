@@ -17,9 +17,11 @@ const Signup = () => {
                     {errors.name && errors.name.type === "required" && <p>This is required</p>}
                     {errors.name && errors.name.type === "maxLength" && <p>Max length exceeded</p>}
 
+                    <label htmlFor="email">Email</label>
                     <input type="email" placeholder="enter your email" {...register('email', { required: true, maxLength: 12 })} />
                     {errors.email && errors.email.type === "maxLength" && <span>Ples Enter 12 Letter</span>}
 
+                    <label htmlFor="password">Password</label>
                     <input type="password" placeholder="enter your password" {...register("password", { required: true, maxLength: 12 })} />
                     {errors.password && errors.password.type === "maxLength" && <p>Please Enter 10 </p>}
                     <button type="submit" className="bttn">Submit</button>
