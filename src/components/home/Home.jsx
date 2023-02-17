@@ -1,61 +1,66 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './Home.css'
 import Contact from '../contact/Contact';
 import Product from '../product/Product';
 import Modal from '../core/modal/Modal';
 import { Div, Input } from '../core/modal';
+import { ClipLoader } from 'react-spinners';
 
 
 
 const Home = () => {
 
     const [isShowForms, setIsShowForms] = useState(false);
+    const [loading, setLoading] = useState(false)
 
-    const [index, setIndex] = useState(0);
+    useEffect(() => {
+        setLoading(true)
 
+        setTimeout(() => {
+            setLoading(false)
+        }, 5000)
 
-    const next = () => {
-        if (index === index.length - 1) {
-            setIndex(0)
-        } else {
-            setIndex(index + 1)
-        }
-    }
-
-    const prev = () => {
-        if (index === 0) {
-            setIndex(index.length - 1)
-        } else {
-            setIndex(index - 1)
-        }
-    }
+    }, [])
 
     return (
         <>
-            <section>
-                <div className='info-wrp'>
-                    <h1>SMS SAREE</h1>
-                    <p>Clothing Store in Muhammadabad Gohna
-                        Opening at 9:00 AM</p>
 
-                    <button onClick={() => setIsShowForms(true)}>
-                        GET QUOTS
-                    </button>
-                </div>
+            {
+                loading ?
+                    <ClipLoader
+                        color={color}
+                        loading={loading}
+                        cssOverride={override}
+                        size={100}
+                        aria-label="Loading Spinner"
+                        data-testid="loader"
+                    />
+                    :
+                    <section>
+                        <div className='info-wrp'>
+                            <h1>SMS SAREE</h1>
+                            <p>Clothing Store in Muhammadabad Gohna
+                                Opening at 9:00 AM</p>
 
-                <div className='img-wrp'>
-                    <img src='https://lh3.googleusercontent.com/p/AF1QipPqURRTKeA-oJ8dpFDwLvhIyMn_6-xjvmzv5flw=w1080-h608-p-no-v0' />
-                </div>
-                <div className='upd'>
-                    <p>UPDATE</p>
-                </div>
+                            <button onClick={() => setIsShowForms(true)}>
+                                GET QUOTS
+                            </button>
+                        </div>
 
-                <Product />
+                        <div className='img-wrp'>
+                            <img src='https://lh3.googleusercontent.com/p/AF1QipPqURRTKeA-oJ8dpFDwLvhIyMn_6-xjvmzv5flw=w1080-h608-p-no-v0' />
+                        </div>
+                        <div className='upd'>
+                            <p>UPDATE</p>
+                        </div>
 
-                <Contact />
+                        <Product />
+
+                        <Contact />
 
 
-            </section>
+                    </section>
+            }
 
             {isShowForms &&
                 <Modal
