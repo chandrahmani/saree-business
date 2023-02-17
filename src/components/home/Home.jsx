@@ -4,7 +4,7 @@ import Contact from '../contact/Contact';
 import Product from '../product/Product';
 import Modal from '../core/modal/Modal';
 import { Div, Input } from '../core/modal';
-import { ClipLoader } from 'react-spinners';
+import { ClipLoader } from 'react-spinners/ClipLoader';
 
 
 
@@ -28,7 +28,7 @@ const Home = () => {
             {
                 loading ?
                     <ClipLoader
-                        color="#fff"
+                        color={"#000000"}
                         loading={loading}
                         size={100}
                         aria-label="Loading Spinner"
