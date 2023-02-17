@@ -28,7 +28,7 @@ const Home = () => {
             {
                 loading ?
                     <ClipLoader
-                        color={color}
+                        color="#fff"
                         loading={loading}
                         cssOverride={override}
                         size={100}
