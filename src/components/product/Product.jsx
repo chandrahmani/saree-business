@@ -32,7 +32,7 @@ const Product = () => {
     return (
         <>
             {
-                loding ?
+                loading ?
                     <ClipLoader
                         color={"#fff"}
                         loading={loading}
