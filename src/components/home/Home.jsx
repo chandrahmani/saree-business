@@ -28,7 +28,7 @@ const Home = () => {
             {
                 loading ?
                     <ClipLoader
-                        color={"#000000"}
+                        color={"#fff"}
                         loading={loading}
                         size={100}
                         aria-label="Loading Spinner"
