@@ -30,7 +30,6 @@ const Home = () => {
                     <ClipLoader
                         color="#fff"
                         loading={loading}
-                        cssOverride={override}
                         size={100}
                         aria-label="Loading Spinner"
                         data-testid="loader"
