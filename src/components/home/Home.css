@@ -86,9 +86,9 @@ h4 {
 }
 
 .loder {
-    max-width: 400px;
-    margin: auto;
-    padding: 2rem;
+    position: absolute;
+    left: 328px;
+    top: 280px;
 }
 
 @media screen and (max-width: 645px) {
