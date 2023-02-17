@@ -53,6 +53,9 @@ const Home = () => {
                         <div className='upd'>
                             <p>UPDATE</p>
                         </div>
+
+                        <Product />
+
                         <Contact />
 
 
