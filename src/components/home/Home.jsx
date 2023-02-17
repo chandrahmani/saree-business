@@ -4,7 +4,7 @@ import Contact from '../contact/Contact';
 import Product from '../product/Product';
 import Modal from '../core/modal/Modal';
 import { Div, Input } from '../core/modal';
-import { ClipLoader } from 'react-spinners/ClipLoader';
+import { ClipLoader } from 'react-spinners';
 
 
 
