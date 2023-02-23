@@ -24,7 +24,7 @@ const Product = () => {
 
 
     useEffect(() => {
-
+        getData()
         setLoding(true)
 
         setTimeout(() => {
