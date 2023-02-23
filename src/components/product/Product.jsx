@@ -24,14 +24,13 @@ const Product = () => {
 
 
     useEffect(() => {
-        getData()
 
         setLoding(true)
 
         setTimeout(() => {
             setLoding(false)
         }, 3000)
-    }, [])
+    }, [getData])
 
     return (
         <>
@@ -62,7 +61,6 @@ const Product = () => {
                             </div>
                         )}
                     </div>
-
             }
 
         </>
