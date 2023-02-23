@@ -1,5 +1,5 @@
 import axios from "axios"
-import { useEffect, useState } from "react"
+import { useEffect, useMemo, useState } from "react"
 import ClipLoader from "react-spinners/ClipLoader"
 
 const Product = () => {
@@ -7,17 +7,21 @@ const Product = () => {
     const [datas, setDatas] = useState([])
     const [loading, setLoding] = useState(false)
 
-    const getData = async () => {
-        try {
-            const { data: result } = await axios.get("data.json")
+    const getData = useMemo(() => {
+        async () => {
+            try {
+                const { data: result } = await axios.get("data.json")
 
-            console.log(result)
-            setDatas(result)
+                console.log(result)
+                setDatas(result)
 
-        } catch (error) {
-            console.log(error)
+            } catch (error) {
+                console.log(error)
+            }
         }
-    }
+    }, [])
+
+
 
     useEffect(() => {
         getData()
