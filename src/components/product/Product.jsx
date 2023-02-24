@@ -24,13 +24,12 @@ const Product = () => {
 
 
     useEffect(() => {
-        getData()
         setLoding(true)
 
         setTimeout(() => {
             setLoding(false)
         }, 3000)
-    }, [getData])
+    }, [getData()])
 
     return (
         <>
