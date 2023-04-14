@@ -3,7 +3,7 @@
 }
 
 .btn {
-    padding: 8px 20px;
+    padding: 7px 20px;
     border-radius: 2px;
     outline: none;
     border: none;
@@ -37,6 +37,6 @@
 .btn--medium:hover,
 .btn--large:hover {
     background-color: #fff;
-    color: #242424;
+    color: #272626;
     transition: all 0.3s ease-out;
 }
